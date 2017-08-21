@@ -17,7 +17,7 @@ class Openssh < Formula
   # https://github.com/Homebrew/homebrew-dupes/pull/482#issuecomment-118994372
 
   depends_on "openssl"
-  depends_on "ldns"
+  depends_on "ldns" => :optional
   depends_on "pkg-config" => :build if build.with? "ldns"
 
   # Both these patches are applied by Apple.
