@@ -18,6 +18,7 @@ class Openssh < Formula
 
   depends_on "openssl"
 
+  # Enable ldns https://github.com/openssh/openssh-portable/commit/4632b63bdc864e0a627bd4620752b33066ad4ef1 
   patch do
     url "https://github.com/openssh/openssh-portable/commit/4632b63bdc864e0a627bd4620752b33066ad4ef1.patch"
     sha256 "97a90f199749ab688483e645942072a24d3e5b691c5792193a7b24850ce6cb6c"
