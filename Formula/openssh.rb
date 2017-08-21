@@ -7,16 +7,21 @@ class Openssh < Formula
   sha256 "9846e3c5fab9f0547400b4d2c017992f914222b3fd1f8eee6c7dc6bc5e59f9f0"
   revision 1
 
-  bottle do
-    sha256 "87916642682b44296aa06297aaeeb2ef10519c6d0363d5286be74657e8758167" => :sierra
-    sha256 "d3573d5402f065728fed6bd00085d6d4599b7151f14ac1cdf000a3140a9526a6" => :el_capitan
-    sha256 "36eab43111afa57e0a3c112b09e85453613196e85922ae546a599d54b555556b" => :yosemite
-  end
+  # bottle do
+  #   sha256 "87916642682b44296aa06297aaeeb2ef10519c6d0363d5286be74657e8758167" => :sierra
+  #   sha256 "d3573d5402f065728fed6bd00085d6d4599b7151f14ac1cdf000a3140a9526a6" => :el_capitan
+  #   sha256 "36eab43111afa57e0a3c112b09e85453613196e85922ae546a599d54b555556b" => :yosemite
+  # end
 
   # Please don't resubmit the keychain patch option. It will never be accepted.
   # https://github.com/Homebrew/homebrew-dupes/pull/482#issuecomment-118994372
 
   depends_on "openssl"
+
+  patch do
+    url "https://github.com/openssh/openssh-portable/commit/4632b63bdc864e0a627bd4620752b33066ad4ef1.patch"
+    sha256 "97a90f199749ab688483e645942072a24d3e5b691c5792193a7b24850ce6cb6c"
+  end
 
   # Both these patches are applied by Apple.
   patch do
