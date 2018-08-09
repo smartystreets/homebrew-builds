@@ -1,15 +1,15 @@
 class VersionTools < Formula
   desc "Simple versioning tools that function without external dependencies."
   homepage "https://github.com/smartystreets/version-tools"
-  version "0.0.1"
+  version "0.0.2"
   url "https://github.com/smartystreets/version-tools/archive/#{version}.tar.gz"
-  sha256 "dfe46bf07e46feb813133393208280dc4378fadb20fdcc8f5f0931cd75ffb9a1"
+  sha256 "d85cae222c0d68c2551be183dbda60fb9014846cad9d1f037a89e92f6cda8711"
 
   depends_on "git"
 
   def install
-    bin.install "calculate-version"
-    bin.install "git-tag-version"
+    bin.install "src/tagit"
+    bin.install "src/bumpit"
   end
 
 end
