@@ -1,9 +1,9 @@
 class VersionTools < Formula
   desc "Simple versioning tools that function without external dependencies."
   homepage "https://github.com/smartystreets/version-tools"
-  version "0.0.2"
+  version "0.0.3"
   url "https://github.com/smartystreets/version-tools/archive/#{version}.tar.gz"
-  sha256 "293b9db2926c6da164b4264767948a5e92b741f9aef5c7f6add3d5b9c4387f2c"
+  sha256 "6f9df271bc814a868cbb7a1b114b1828beb215ab82757a3411268e8854cc39cc"
 
   depends_on "git"
 
