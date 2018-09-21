@@ -7,8 +7,6 @@ class VersionTools < Formula
 
   # sha256: curl -sL "https://github.com/smartystreets/version-tools/archive/0.0.6.tar.gz" | sha256sum
 
-  depends_on "git"
-
   def install
     bin.install "src/tagit"
     bin.install "src/bumpit"
