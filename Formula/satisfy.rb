@@ -1,7 +1,7 @@
 class Satisfy < Formula
   desc "Simple ultra lightweight dependency manager."
   homepage "https://github.com/smartystreets/satisfy"
-  version "0.9.5"
+  version "v0.9.5"
   url "https://github.com/smartystreets/satisfy/archive/#{version}.tar.gz"
   sha256 "4c8fa8f84c8cb1328340bde4f5befdc774b6a1a84bcf381403c15e0928b168b9"
 
