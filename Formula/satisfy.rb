@@ -12,6 +12,3 @@ class Satisfy < Formula
   end
 
 end
-
-
-https://github.com/smartystreets/satisfy/releases/download/v0.9.7/satisfy_darwin-amd64.tar.gz
