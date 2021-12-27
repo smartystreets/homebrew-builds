@@ -1,12 +1,12 @@
 class Satisfy < Formula
   desc "Simple ultra lightweight dependency manager."
   homepage "https://github.com/smartystreets/satisfy"
-  version "v0.9.9"
+  version "v0.9.10"
   url "https://github.com/smartystreets/satisfy/releases/download/#{version}/satisfy_darwin-amd64.tar.gz"
-  sha256 "3c9ac29573a29b1768ffabc45539a2b2923682f35d75ac5ddb3b2467cd37a622"
+  sha256 "54fdf56383022b3c479564b5d505d82c088cafc37480214bcd8e71bceb42d46a"
 
   # to compute sha256:
-  # curl -sL "https://github.com/smartystreets/satisfy/releases/download/v0.9.9/satisfy_darwin-amd64.tar.gz" | sha256sum
+  # curl -sL "https://github.com/smartystreets/satisfy/releases/download/v0.9.10/satisfy_darwin-amd64.tar.gz" | sha256sum
 
   def install
     bin.install "satisfy"
