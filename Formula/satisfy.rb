@@ -5,11 +5,9 @@ class Satisfy < Formula
   if Hardware::CPU.arm?
     url "https://github.com/smarty/satisfy/releases/download/#{version}/satisfy_darwin-arm64.tar.gz"
     sha256 "60ba5ee7ffe40af292b3397a2f48797c0aa00a504e1370592ad1130068e56375"
-  else if Hardware::CPU.intel?
+  else
     url "https://github.com/smarty/satisfy/releases/download/#{version}/satisfy_darwin-amd64.tar.gz"
     sha256 "08d18cc0aad7d76045578dd203577a2564edffe27f655438a1e5e1d9663306cc"
-  else
-    odie "Archicture not supported"
   end
 
   # to compute sha256 on intel mac:
