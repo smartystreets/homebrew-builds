@@ -2,12 +2,17 @@ class Satisfy < Formula
   desc "Simple ultra lightweight dependency manager."
   homepage "https://github.com/smarty/satisfy"
   version "v0.13.0"
-  if Hardware::CPU.arm?
-    url "https://github.com/smarty/satisfy/releases/download/#{version}/satisfy_darwin-arm64.tar.gz"
-    sha256 "ca3f5396f2880460ef075b70a30b78ef262cf26e9de22797e3d49827f829f911"
+  if OS.mac?
+    if Hardware::CPU.arm?
+      url "https://github.com/smarty/satisfy/releases/download/#{version}/satisfy_darwin-arm64.tar.gz"
+      sha256 "ca3f5396f2880460ef075b70a30b78ef262cf26e9de22797e3d49827f829f911"
+    else
+      url "https://github.com/smarty/satisfy/releases/download/#{version}/satisfy_darwin-amd64.tar.gz"
+      sha256 "82f92b1a153ca669ba0eec976665b23de9739e17d550c399581d9b1327c8100b"
+    end
   else
-    url "https://github.com/smarty/satisfy/releases/download/#{version}/satisfy_darwin-amd64.tar.gz"
-    sha256 "82f92b1a153ca669ba0eec976665b23de9739e17d550c399581d9b1327c8100b"
+    url "https://github.com/smarty/satisfy/releases/download/#{version}/satisfy_linux-amd64.tar.gz"
+    sha256 "11d64a975e1de5d6bc54e5cb4d68570e00ca453e26bbd239b738e37183b2a737"
   end
 
   # to compute sha256 on m(1) mac:
