@@ -1,24 +1,24 @@
 class Satisfy < Formula
   desc "Simple ultra lightweight dependency manager."
   homepage "https://github.com/smarty/satisfy"
-  version "v0.13.0"
+  version "v0.14.1"
   if OS.mac?
     if Hardware::CPU.arm?
       url "https://github.com/smarty/satisfy/releases/download/#{version}/satisfy_darwin-arm64.tar.gz"
-      sha256 "ca3f5396f2880460ef075b70a30b78ef262cf26e9de22797e3d49827f829f911"
+      sha256 "e71d957b117f0ab61fa3ec94917d874082355253a3773e8c4fc5b5d734d19e29"
     else
       url "https://github.com/smarty/satisfy/releases/download/#{version}/satisfy_darwin-amd64.tar.gz"
-      sha256 "82f92b1a153ca669ba0eec976665b23de9739e17d550c399581d9b1327c8100b"
+      sha256 "698294130fcbfcfcce63a93a688b7566818631ee099311a033b2f8df5996bff7"
     end
   else
     url "https://github.com/smarty/satisfy/releases/download/#{version}/satisfy_linux-amd64.tar.gz"
-    sha256 "11d64a975e1de5d6bc54e5cb4d68570e00ca453e26bbd239b738e37183b2a737"
+    sha256 "a23317ea45e65deb553f8ec776d59ea8b80833957ec275410e2f68896ae9f47b"
   end
 
   # to compute sha256 on m(1) mac:
-  # curl -sL "https://github.com/smarty/satisfy/releases/download/v0.13.0/satisfy_darwin-arm64.tar.gz" | sha256sum
+  # curl -sL "https://github.com/smarty/satisfy/releases/download/v0.14.1/satisfy_darwin-arm64.tar.gz" | sha256sum
   # to compute sha256 on intel mac:
-  # curl -sL "https://github.com/smarty/satisfy/releases/download/v0.13.0/satisfy_darwin-amd64.tar.gz" | sha256sum
+  # curl -sL "https://github.com/smarty/satisfy/releases/download/v0.14.1/satisfy_darwin-amd64.tar.gz" | sha256sum
   def install
     bin.install "satisfy"
   end
